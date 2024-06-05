@@ -1,0 +1,22 @@
+[2024-05-31 09:10:26.115] [info] Running: "duplex" "sup,5mCG_5hmCG" "/private/groups/migalab/jmmenend/data/duplex/1_3_23_R1041_Duplex_HG002_1_pod5"
+[2024-05-31 09:10:26.153] [info] > No duplex pairs file provided, pairing will be performed automatically
+[2024-05-31 09:10:33.897] [info]  - downloading dna_r10.4.1_e8.2_400bps_sup@v4.1.0 with httplib
+[2024-05-31 09:10:35.595] [info]  - downloading dna_r10.4.1_e8.2_4khz_stereo@v1.1 with httplib
+[2024-05-31 09:10:35.899] [info]  - downloading dna_r10.4.1_e8.2_4khz_stereo@v1.1 with httplib
+[2024-05-31 09:10:36.100] [info]  - downloading dna_r10.4.1_e8.2_400bps_sup@v4.1.0_5mCG_5hmCG@v2 with httplib
+[2024-05-31 09:10:53.259] [info] cuda:1 using chunk size 10000, batch size 640
+[2024-05-31 09:10:53.259] [info] cuda:0 using chunk size 10000, batch size 640
+[2024-05-31 09:10:54.000] [info] cuda:3 using chunk size 10000, batch size 640
+[2024-05-31 09:10:54.000] [info] cuda:2 using chunk size 10000, batch size 640
+[2024-05-31 09:10:58.592] [info] cuda:1 using chunk size 10000, batch size 1600
+[2024-05-31 09:10:58.592] [info] cuda:3 using chunk size 10000, batch size 1600
+[2024-05-31 09:10:58.602] [info] cuda:0 using chunk size 10000, batch size 1600
+[2024-05-31 09:10:58.602] [info] cuda:2 using chunk size 10000, batch size 960
+[2024-05-31 09:11:00.208] [info] > Starting Stereo Duplex pipeline
+[2024-05-31 09:11:00.281] [info] > Reading read channel info
+[2024-05-31 09:11:05.939] [info] > Processed read channel info
+[2024-06-01 00:43:04.700] [info] > Simplex reads basecalled: 4032289
+[2024-06-01 00:43:04.705] [info] > Simplex reads filtered: 2452
+[2024-06-01 00:43:04.705] [info] > Duplex reads basecalled: 828096
+[2024-06-01 00:43:04.708] [info] > Duplex rate: 53.40305%
+[2024-06-01 00:43:04.708] [info] > Basecalled @ Bases/s: 1.715382e+06
