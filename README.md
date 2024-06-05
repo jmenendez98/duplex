@@ -8,10 +8,14 @@ https://s3-us-west-2.amazonaws.com/human-pangenomics/submissions/5b73fa0e-658a-4
 ```
 ### Basecalling: 
 ```
+tar -xvf <tar>
+
+pod5 fast5 <tar_folder> <pod5_folder>
+
 dorado-0.6.1 duplex sup,5mCG_5hmCG <pod5_folder> > <output.bam>
 ```
 ### Filtering:
-Gives you a bam file only containing **paired** duplex reads
+Filters out all non-duplex reads in bam file
 ```
 samtools view -b -h -d dx:1 <all_reads.bam> > <duplex.bam>
 ```
@@ -53,7 +57,28 @@ rm ${methyl_fastq}
 ```
 ### Secphase:
 ```
-NOT RUN YET
+docker run \
+	-v ${input_dir}:${input_dir} \
+	-v ${output_dir}:${output_dir} \
+	-u $(id -u):$(id -g) \
+	mobinasri/secphase:v0.4.3 \
+	secphase --ont \
+	-i ${name_sort_output} \
+	-f ${hg002v1_reference} \
+	--outDir ${output_dir} \
+	--prefix ${output_prefix} \
+	--threads ${threads}
+
+docker run \
+	-v ${input_dir}:${input_dir} \
+        -v ${output_dir}:${output_dir} \
+	-u  $(id -u):$(id -g) \
+	mobinasri/secphase:v0.4.3 \
+	correct_bam \
+	-i ${name_sort_input} \
+	-P "${output_dir}/${output_prefix}.out.log" \
+	-o "${output_dir}/${output_prefix}.corrected.bam" \
+	--primaryOnly
 ```
 
 ## Analyses:
