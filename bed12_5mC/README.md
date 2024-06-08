@@ -1,0 +1,2 @@
+# Duplex Bed Convert:
+Designed to used pysam to convert individual duplex reads where each read becomes two bed entries one for positive stranded methylation and one for negative stranded methylation. The methylation is represented as blocks in the output bed file.
